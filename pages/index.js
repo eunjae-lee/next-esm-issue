@@ -1,5 +1,8 @@
 import Head from "next/head";
-import ForceGraph from "react-force-graph-2d";
+import dynamic from "next/dynamic";
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
